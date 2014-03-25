@@ -11,11 +11,15 @@ EventWatcher::~EventWatcher(void)
 {
 }
 
-void update(sf::Time deltaTime)
+void EventWatcher::update(sf::Time deltaTime)
 {
 }
 
 //does nothing.  Do not Use.
-void takePupil(Component* pupil)
+void EventWatcher::takePupil(Component* pupil)
+{
+}
+
+void EventWatcher::clickEventRegister(const sf::Transformable *clickArea, void *callback(int,int), int Radius)
 {
 }

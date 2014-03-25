@@ -1,7 +1,9 @@
 #pragma once
 
 #include <list>
-#include "controller.h"
+#include "Controller.h"
+
+using namespace std;
 
 class EventWatcher : Controller
 {
@@ -13,20 +15,18 @@ public:
 	void takePupil(Component* pupil);
 
 	//int x, int y
-	void clickEventRegister(const sf::Transformable *clickArea, void *callback(int,int));
+	void clickEventRegister(const sf::Transformable *clickArea, void *callback(int,int), int Radius);
 
 	int magicNumber() override
 	{
 		return 2;
 	};
 
-
-
 	EventWatcher(void);
 	~EventWatcher(void);
 
 private:
-
+	
 	
 
 };
@@ -35,5 +35,8 @@ struct ClickEvent
 {
 	void *onEventAction(int,int);
 
+	sf::Transformable *detectionArea;
+
+	int radius;
 
 };

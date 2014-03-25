@@ -2,7 +2,7 @@
 
 #include <list>
 #include <array>
-#include "controller.h"
+#include "Controller.h"
 #include "DrawComponent.h"
 
 using namespace std;
