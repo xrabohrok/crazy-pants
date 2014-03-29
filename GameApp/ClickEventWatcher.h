@@ -5,7 +5,17 @@
 
 using namespace std;
 
-class EventWatcher : Controller
+struct ClickEvent
+{
+	void *onEventAction(int,int);
+
+	sf::Transformable *detectionArea;
+
+	int radius;
+
+};
+
+class ClickEventWatcher : Controller
 {
 public:
 
@@ -22,21 +32,13 @@ public:
 		return 2;
 	};
 
-	EventWatcher(void);
-	~EventWatcher(void);
+	ClickEventWatcher(void);
+	~ClickEventWatcher(void);
 
 private:
-	
+	list<ClickEvent> allEvents;
 	
 
 };
 
-struct ClickEvent
-{
-	void *onEventAction(int,int);
 
-	sf::Transformable *detectionArea;
-
-	int radius;
-
-};

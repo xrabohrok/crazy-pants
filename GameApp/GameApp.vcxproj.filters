@@ -78,7 +78,7 @@
     <ClInclude Include="GameObject.h">
       <Filter>Header Files\Helpers</Filter>
     </ClInclude>
-    <ClInclude Include="EventWatcher.h">
+    <ClInclude Include="ClickEventWatcher.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -122,7 +122,7 @@
     <ClCompile Include="Controller.cpp">
       <Filter>Source Files\Helpers</Filter>
     </ClCompile>
-    <ClCompile Include="EventWatcher.cpp">
+    <ClCompile Include="ClickEventWatcher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
