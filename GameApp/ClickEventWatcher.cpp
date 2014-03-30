@@ -2,6 +2,7 @@
 #include "ClickEventWatcher.h"
 
 
+
 ClickEventWatcher::ClickEventWatcher(void):allEvents()
 {
 }
@@ -20,6 +21,7 @@ void ClickEventWatcher::takePupil(Component* pupil)
 {
 }
 
-void ClickEventWatcher::clickEventRegister(const sf::Transformable *clickArea, void *callback(int,int), int Radius)
+void ClickEventWatcher::clickEventRegister(Rotatable *clickArea, void *callback(int,int))
 {
+	allEvents.push_back();
 }

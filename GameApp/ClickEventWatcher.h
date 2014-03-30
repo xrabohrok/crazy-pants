@@ -2,6 +2,7 @@
 
 #include <list>
 #include "Controller.h"
+#include "Rotatable.h"
 
 using namespace std;
 
@@ -9,10 +10,13 @@ struct ClickEvent
 {
 	void *onEventAction(int,int);
 
-	sf::Transformable *detectionArea;
+	Rotatable *detectionArea;
 
-	int radius;
-
+	ClickEvent(Rotatable* input, void *callback(int,int))
+	{
+		detectionArea = input;
+		onEventAction = callback;
+	}
 };
 
 class ClickEventWatcher : Controller
@@ -25,7 +29,7 @@ public:
 	void takePupil(Component* pupil);
 
 	//int x, int y
-	void clickEventRegister(const sf::Transformable *clickArea, void *callback(int,int), int Radius);
+	void clickEventRegister(Rotatable *clickArea, void *callback(int,int));
 
 	int magicNumber() override
 	{
