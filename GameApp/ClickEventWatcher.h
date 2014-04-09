@@ -8,11 +8,11 @@ using namespace std;
 
 struct ClickEvent
 {
-	void *onEventAction(int,int);
+	void (*onEventAction)(int,int);
 
 	Rotatable *detectionArea;
 
-	ClickEvent(Rotatable* input, void *callback(int,int))
+	ClickEvent(Rotatable* input, void callback(int,int))
 	{
 		detectionArea = input;
 		onEventAction = callback;
@@ -29,7 +29,7 @@ public:
 	void takePupil(Component* pupil);
 
 	//int x, int y
-	void clickEventRegister(Rotatable *clickArea, void *callback(int,int));
+	void clickEventRegister(Rotatable *clickArea, void callback(int,int));
 
 	int magicNumber() override
 	{
@@ -40,7 +40,7 @@ public:
 	~ClickEventWatcher(void);
 
 private:
-	list<ClickEvent> allEvents;
+	list<ClickEvent*> allEvents;
 	
 
 };
