@@ -2,7 +2,7 @@
 
 #include <list>
 #include "Controller.h"
-#include "Rotatable.h"
+#include "RotatableRect.h"
 
 using namespace std;
 
@@ -10,9 +10,9 @@ struct ClickEvent
 {
 	void (*onEventAction)(int,int);
 
-	Rotatable *detectionArea;
+	RotatableRect *detectionArea;
 
-	ClickEvent(Rotatable* input, void callback(int,int))
+	ClickEvent(RotatableRect* input, void callback(int,int))
 	{
 		detectionArea = input;
 		onEventAction = callback;
@@ -29,7 +29,7 @@ public:
 	void takePupil(Component* pupil);
 
 	//int x, int y
-	void clickEventRegister(Rotatable *clickArea, void callback(int,int));
+	void clickEventRegister(RotatableRect *clickArea, void callback(int,int));
 
 	int magicNumber() override
 	{

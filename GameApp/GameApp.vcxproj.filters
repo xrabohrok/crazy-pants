@@ -81,7 +81,10 @@
     <ClInclude Include="ClickEventWatcher.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Rotatable.h">
+    <ClInclude Include="RotatableRect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionCircle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -128,7 +131,10 @@
     <ClCompile Include="ClickEventWatcher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Rotatable.cpp">
+    <ClCompile Include="RotatableRect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionCircle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

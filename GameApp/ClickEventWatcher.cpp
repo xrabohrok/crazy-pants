@@ -26,7 +26,7 @@ void ClickEventWatcher::takePupil(Component* pupil)
 {
 }
 
-void ClickEventWatcher::clickEventRegister(Rotatable *clickArea, void callback(int,int))
+void ClickEventWatcher::clickEventRegister(RotatableRect *clickArea, void callback(int,int))
 {
 	allEvents.push_back(new ClickEvent(clickArea, callback));
 }

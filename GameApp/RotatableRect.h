@@ -1,11 +1,11 @@
 #pragma once
 
-class Rotatable
+class RotatableRect
 {
 
 protected:
-	Rotatable(void);
-	~Rotatable(void);
+	RotatableRect(void);
+	~RotatableRect(void);
 
 public:
 	virtual float rotation();

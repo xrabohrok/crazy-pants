@@ -98,6 +98,7 @@ xcopy $(SolutionDir)Assets $(SolutionDir)\$(Configuration)\Assets</Command>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CollisionCircle.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="ComponentEntityBridge.h" />
     <ClInclude Include="Controller.h" />
@@ -110,11 +111,12 @@ xcopy $(SolutionDir)Assets $(SolutionDir)\$(Configuration)\Assets</Command>
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="GameStateManager.h" />
-    <ClInclude Include="Rotatable.h" />
+    <ClInclude Include="RotatableRect.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CollisionCircle.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="ComponentEntityBridge.cpp" />
     <ClCompile Include="Controller.cpp" />
@@ -128,7 +130,7 @@ xcopy $(SolutionDir)Assets $(SolutionDir)\$(Configuration)\Assets</Command>
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="GameStateManager.cpp" />
-    <ClCompile Include="Rotatable.cpp" />
+    <ClCompile Include="RotatableRect.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
