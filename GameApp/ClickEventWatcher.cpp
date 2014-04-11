@@ -3,15 +3,15 @@
 
 
 
-ClickEventWatcher::ClickEventWatcher(void):allEvents()
+ClickEventWatcher::ClickEventWatcher(void):allRectEvents(),allCircleEvents()
 {
 }
 
 
 ClickEventWatcher::~ClickEventWatcher(void)
 {
-	list<ClickEvent*>::iterator iter;
-	for(iter = allEvents.begin(); iter != allEvents.end(); iter++)
+	list<RectClickEvent*>::iterator iter;
+	for(iter = allRectEvents.begin(); iter != allRectEvents.end(); iter++)
 	{
 		delete (*iter);
 	}
@@ -28,5 +28,10 @@ void ClickEventWatcher::takePupil(Component* pupil)
 
 void ClickEventWatcher::clickEventRegister(RotatableRect *clickArea, void callback(int,int))
 {
-	allEvents.push_back(new ClickEvent(clickArea, callback));
+	allRectEvents.push_back(new RectClickEvent(clickArea, callback));
+}
+
+void ClickEventWatcher::clickEventRegister(CollisionCircle *clickArea, void callback(int,int))
+{
+	allCircleEvents.push_back(new CircleClickEvent(clickArea, callback));
 }
