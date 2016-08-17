@@ -3,16 +3,30 @@
 #include <list>
 #include "Controller.h"
 #include "RotatableRect.h"
+#include "CollisionCircle.h"
 
 using namespace std;
 
-struct ClickEvent
+struct RectClickEvent
 {
 	void (*onEventAction)(int,int);
 
 	RotatableRect *detectionArea;
 
-	ClickEvent(RotatableRect* input, void callback(int,int))
+	RectClickEvent(RotatableRect* input, void callback(int,int))
+	{
+		detectionArea = input;
+		onEventAction = callback;
+	}
+};
+
+struct CircleClickEvent
+{
+	void (*onEventAction)(int,int);
+
+	CollisionCircle *detectionArea;
+
+	CircleClickEvent(CollisionCircle* input, void callback(int,int))
 	{
 		detectionArea = input;
 		onEventAction = callback;
@@ -28,8 +42,10 @@ public:
 	//does nothing. Do not use.
 	void takePupil(Component* pupil);
 
-	//int x, int y
+	//int x, int y of the mouse
 	void clickEventRegister(RotatableRect *clickArea, void callback(int,int));
+	void clickEventRegister(CollisionCircle *clickArea, void callback(int,int));
+
 
 	int magicNumber() override
 	{
@@ -40,9 +56,8 @@ public:
 	~ClickEventWatcher(void);
 
 private:
-	list<ClickEvent*> allEvents;
-	
-
+	list<CircleClickEvent*> allCircleEvents;
+	list<RectClickEvent*> allRectEvents;
 };
 
 
