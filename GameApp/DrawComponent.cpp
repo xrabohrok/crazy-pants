@@ -1,8 +1,6 @@
 #include "stdafx.h"
 #include "DrawComponent.h"
 
-
-
 DrawComponent::DrawComponent(sf::Texture* texture):animSet()
 {
 	drawSprite = new sf::Sprite(*texture);
@@ -48,7 +46,7 @@ DrawComponent::DrawComponent(const DrawComponent& original)
 	drawSprite = new sf::Sprite(*(original.drawSprite));
 }
 
-//as a user, call this to connect to the Controller
+//as a user, call this in your constructor
 void DrawComponent::registerToController()
 {
 	ComponentEntityBridge* finder = ComponentEntityBridge::getInstance();

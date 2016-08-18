@@ -98,31 +98,26 @@ xcopy $(SolutionDir)Assets $(SolutionDir)\$(Configuration)\Assets</Command>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CollisionCircle.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="ComponentEntityBridge.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="DrawComponent.h" />
     <ClInclude Include="DrawController.h" />
-    <ClInclude Include="ClickEventWatcher.h" />
     <ClInclude Include="ExampleGameLoop.h" />
     <ClInclude Include="Fish.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="GameStateManager.h" />
-    <ClInclude Include="RotatableRect.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CollisionCircle.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="ComponentEntityBridge.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="DrawComponent.cpp" />
     <ClCompile Include="DrawController.cpp" />
-    <ClCompile Include="ClickEventWatcher.cpp" />
     <ClCompile Include="ExampleGameLoop.cpp" />
     <ClCompile Include="Fish.cpp" />
     <ClCompile Include="Game.cpp" />
@@ -130,7 +125,6 @@ xcopy $(SolutionDir)Assets $(SolutionDir)\$(Configuration)\Assets</Command>
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="GameStateManager.cpp" />
-    <ClCompile Include="RotatableRect.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
